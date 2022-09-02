@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+Email change
+{% endblock %}
+{% block content %}
+    <!--Email Reset Confirm-->
+    <div class="container p-5">
+	    <h2 class="font-weight-bold mt-3">Email reset</h2>
+		<hr>
+        <p>Please enter your new email.</p>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn btn-primary" type="submit">Reset email</button>
+        </form>
+    </div>
+{% endblock %}

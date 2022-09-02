@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Errore
+{% endblock %}
+{% block content %}
+    <!--Reset Password-->
+	<div class="container p-5">
+  	 	<h2 class="font-weight-bold mt-3" style="color: red">Error</h2>
+		<hr>
+		<p>{{ error }}</p>
+        {% if back is not None %}
+            <a href="{{ back }}">Go back</a>
+        {% endif %}
+  	</div>
+{% endblock %}
